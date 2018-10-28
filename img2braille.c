@@ -44,8 +44,8 @@ int main(int argc, char **argv)
 		float y = r * 0.2126f + g * 0.7152f + b * 0.0722f;
 		float z = r * 0.0193f + g * 0.1192f + b * 0.9505f;
 
-		if (y <= 0.0031308) y *= 12.92f;
-		else y = (1.0f + alpha) * pow(y, 1.0f/2.4f) - alpha;
+		// if (y <= 0.0031308) y *= 12.92f;
+		// else y = (1.0f + alpha) * pow(y, 1.0f/2.4f) - alpha;
 		result[i+2] = y;
 	}
 	stbi_image_free(data);
